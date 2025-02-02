@@ -11,6 +11,9 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.skzEt.EqlanMod.block.ModBlocks;
+import net.skzEt.EqlanMod.item.ModCreativeModTabs;
+import net.skzEt.EqlanMod.item.ModItems;
 import org.slf4j.Logger;
 
 @Mod(Eqlan.MOD_ID)
@@ -23,10 +26,13 @@ public class Eqlan
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
-
         MinecraftForge.EVENT_BUS.register(this);
-
         modEventBus.addListener(this::addCreative);
     }
 
