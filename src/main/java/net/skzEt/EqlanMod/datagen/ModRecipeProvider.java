@@ -1,10 +1,7 @@
 package net.skzEt.EqlanMod.datagen;
 
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -18,13 +15,29 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
+    private static final List<ItemLike> TWITCH_SMELTABLES = List.of(
+            ModBlocks.TWITCH_ORE.get()
+    );
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+        oreSmelting(consumer, TWITCH_SMELTABLES, RecipeCategory.MISC, ModItems.TWITCH_DIAMOND.get(), 0.1f, 200, "twitch");
+        oreBlasting(consumer, TWITCH_SMELTABLES, RecipeCategory.MISC, ModItems.TWITCH_DIAMOND.get(), 0.1f, 100, "twitch");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TWITCH_BLOCK.get())
+                .pattern("TTT")
+                .pattern("TTT")
+                .pattern("TTT")
+                .define('T', ModItems.TWITCH_DIAMOND.get())
+                .unlockedBy(getHasName(ModItems.TWITCH_DIAMOND.get()), has(ModItems.TWITCH_DIAMOND.get()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TWITCH_DIAMOND.get(), 9)
+                .requires(ModBlocks.TWITCH_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.TWITCH_BLOCK.get()), has(ModBlocks.TWITCH_BLOCK.get()))
+                .save(consumer);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {

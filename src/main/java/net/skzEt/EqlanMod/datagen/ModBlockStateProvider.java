@@ -15,6 +15,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        blockWithItem(ModBlocks.TWITCH_BLOCK);
         blockWithItem(ModBlocks.TWITCH_ORE);
     }
 

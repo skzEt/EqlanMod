@@ -12,8 +12,8 @@ import net.skzEt.EqlanMod.util.ModTags;
 import java.util.List;
 
 public class ModToolTiers {
-    public static final Tier SAPPHIRE = TierSortingRegistry.registerTier(
+    public static final Tier TWITCH = TierSortingRegistry.registerTier(
             new ForgeTier(5, 1500, 5f, 4f, 25,
                     ModTags.Blocks.NEEDS_TWITCH_TOOLS, () -> Ingredient.of(ModItems.TWITCH_DIAMOND.get())),
-            new ResourceLocation(Eqlan.MOD_ID, "twitch_diamond"), List.of(Tiers.NETHERITE), List.of());
+            new ResourceLocation(Eqlan.MOD_ID, "twitch"), List.of(Tiers.NETHERITE), List.of());
 }

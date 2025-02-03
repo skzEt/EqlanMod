@@ -1,4 +1,6 @@
 {
   "item.eqlanmod.twitch_diamond": "Twitch Diamond",
-  "block.eqlanmod.twitch_ore": "Twitch Ore"
+  "block.eqlanmod.twitch_ore": "Twitch Ore",
+  "block.eqlanmod.twitch_block": "Twitch Block",
+  "creativetab.eqlan_tab": "Eqlan Mod"
 }
