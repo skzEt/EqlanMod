@@ -15,8 +15,9 @@ public class ModItems {
     // Default Items
     public static final RegistryObject<Item> TWITCH_DIAMOND = ITEMS.register("twitch_diamond",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SCHOOL_BOOT = ITEMS.register("school_boot",
+            () -> new Item(new Item.Properties()));
     // Food
-
     public static final RegistryObject<Item> DUMPLING = ITEMS.register("dumpling",
             () -> new Item(new Item.Properties().food(ModFoods.DUMPLING)));
 

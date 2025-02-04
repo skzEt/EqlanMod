@@ -23,6 +23,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.TWITCH_DIAMOND);
         simpleItem(ModItems.DUMPLING);
+        simpleItem(ModItems.SCHOOL_BOOT);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

@@ -26,6 +26,7 @@ public class ModCreativeModTabs {
                        output.accept(ModBlocks.TWITCH_ORE.get());
                         // Items
                         output.accept(ModItems.TWITCH_DIAMOND.get());
+                        output.accept(ModItems.SCHOOL_BOOT.get());
                         output.accept(ModItems.DUMPLING.get());
                     })
                     .build());

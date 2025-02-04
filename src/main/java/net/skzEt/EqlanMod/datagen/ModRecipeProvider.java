@@ -48,6 +48,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('G', Items.BLACK_STAINED_GLASS)
                 .unlockedBy(getHasName(ModItems.TWITCH_DIAMOND.get()), has(ModItems.TWITCH_DIAMOND.get()))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SCHOOL_BOOT.get())
+                .pattern("KKK")
+                .pattern("KBK")
+                .pattern("KKK")
+                .define('K', Items.DRIED_KELP)
+                .define('B', Items.BLACK_DYE)
+                .unlockedBy(getHasName(Items.DRIED_KELP), has(Items.DRIED_KELP))
+                .save(consumer);
 
     }
 
