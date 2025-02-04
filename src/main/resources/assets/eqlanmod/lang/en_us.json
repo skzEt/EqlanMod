@@ -1,6 +1,7 @@
 {
-  "item.eqlanmod.twitch_diamond": "Twitch Diamond",
-  "block.eqlanmod.twitch_ore": "Twitch Ore",
-  "block.eqlanmod.twitch_block": "Twitch Block",
+  "item.eqlanmod.dumpling": "Пельмень",
+  "item.eqlanmod.twitch_diamond": "Твичовский алмаз",
+  "block.eqlanmod.twitch_ore": "Твичовская руда",
+  "block.eqlanmod.twitch_block": "Твичовский блок",
   "creativetab.eqlan_tab": "Eqlan Mod"
 }

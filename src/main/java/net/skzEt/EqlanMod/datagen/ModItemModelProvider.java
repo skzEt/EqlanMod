@@ -22,6 +22,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.TWITCH_DIAMOND);
+        simpleItem(ModItems.DUMPLING);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
