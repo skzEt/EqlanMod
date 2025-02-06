@@ -1,9 +1,12 @@
 {
-  "item.eqlanmod.dumpling": "Пельмень",
+  "item.eqlanmod.dumpling": "Пельми?",
   "item.eqlanmod.twitch_diamond": "Твичовский алмаз",
   "item.eqlanmod.school_boot": "Школьный ботинок",
   "item.eqlanmod.stintocoin": "Стинта Коин",
   "item.eqlanmod.twitch_heart": "Сердце Твича",
+  "item.eqlanmod.drake": "Драке (оригинал)",
+  "item.eqlanmod.glasses": "Крутые очки",
+  "item.eqlanmod.dumpling_sun": "Солнечный пельмень",
   "block.eqlanmod.twitch_ore": "Твичовская руда",
   "block.eqlanmod.twitch_block": "Твичовский блок",
   "creativetab.eqlan_tab": "Eqlan Mod"

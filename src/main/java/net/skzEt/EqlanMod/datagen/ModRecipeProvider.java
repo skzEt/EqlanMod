@@ -27,7 +27,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
         oreSmelting(consumer, TWITCH_SMELTABLES, RecipeCategory.MISC, ModItems.TWITCH_DIAMOND.get(), 0.1f, 200, "twitch");
         oreBlasting(consumer, TWITCH_SMELTABLES, RecipeCategory.MISC, ModItems.TWITCH_DIAMOND.get(), 0.1f, 100, "twitch");
-
+        // Twitch Block
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TWITCH_BLOCK.get())
                 .pattern("TTT")
                 .pattern("TTT")
@@ -35,10 +35,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('T', ModItems.TWITCH_DIAMOND.get())
                 .unlockedBy(getHasName(ModItems.TWITCH_DIAMOND.get()), has(ModItems.TWITCH_DIAMOND.get()))
                 .save(consumer);
+        // Twitch Diamond
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.TWITCH_DIAMOND.get(), 9)
                 .requires(ModBlocks.TWITCH_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.TWITCH_BLOCK.get()), has(ModBlocks.TWITCH_BLOCK.get()))
                 .save(consumer);
+        // Dumpling
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DUMPLING.get())
                 .pattern(" W ")
                 .pattern("WHW")
@@ -47,6 +49,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('H', ModItems.TWITCH_HEART.get())
                 .unlockedBy(getHasName(ModItems.TWITCH_HEART.get()), has(ModItems.TWITCH_HEART.get()))
                 .save(consumer);
+        // School Boot
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SCHOOL_BOOT.get())
                 .pattern("KKK")
                 .pattern("KBK")
@@ -55,6 +58,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('B', Items.BLACK_DYE)
                 .unlockedBy(getHasName(Items.DRIED_KELP), has(Items.DRIED_KELP))
                 .save(consumer);
+        // Twitch Heart
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TWITCH_HEART.get())
                 .pattern( " T ")
                 .pattern("TGT")
@@ -63,13 +67,32 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('G', Items.GOLD_INGOT)
                 .unlockedBy(getHasName(ModItems.TWITCH_DIAMOND.get()), has(ModItems.TWITCH_DIAMOND.get()))
                 .save(consumer);
+        // Stint-o-Coin
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STINTOCOIN.get())
                 .pattern(" G ")
                 .pattern("GHG")
                 .pattern(" G ")
-                .define('G', Items.GOLD_INGOT)
+                .define('G', Items.GOLD_NUGGET)
                 .define('H', ModItems.TWITCH_HEART.get())
                 .unlockedBy(getHasName(ModItems.TWITCH_HEART.get()), has(ModItems.TWITCH_HEART.get()))
+                .save(consumer);
+        // Drake
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DRAKE.get())
+                .pattern(" F ")
+                .pattern("FHF")
+                .pattern(" F ")
+                .define('F', Items.BONE_MEAL)
+                .define('H', ModItems.TWITCH_HEART.get())
+                .unlockedBy(getHasName(ModItems.TWITCH_HEART.get()), has(ModItems.TWITCH_HEART.get()))
+                .save(consumer);
+        // Glasses
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GLASSES.get())
+                .pattern("C C")
+                .pattern("GCG")
+                .pattern("  ")
+                .define('C', Items.COAL)
+                .define('G', Items.GLASS)
+                .unlockedBy(getHasName(Items.COAL), has(ModItems.TWITCH_HEART.get()))
                 .save(consumer);
 
     }

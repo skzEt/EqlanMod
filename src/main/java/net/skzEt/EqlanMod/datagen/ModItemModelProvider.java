@@ -21,10 +21,15 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        simpleItem(ModItems.TWITCH_DIAMOND);
-        simpleItem(ModItems.DUMPLING);
-        simpleItem(ModItems.SCHOOL_BOOT);
+        // Streamers
+        simpleItem(ModItems.DRAKE);
         simpleItem(ModItems.STINTOCOIN);
+        simpleItem(ModItems.DUMPLING);
+        simpleItem(ModItems.DUMPLING_SUN);
+        // Default
+        simpleItem(ModItems.TWITCH_DIAMOND);
+        simpleItem(ModItems.GLASSES);
+        simpleItem(ModItems.SCHOOL_BOOT);
         simpleItem(ModItems.TWITCH_HEART);
     }
 

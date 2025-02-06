@@ -20,16 +20,19 @@ public class ModCreativeModTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TWITCH_DIAMOND.get()))
                     .title(Component.translatable("creativetab.eqlan_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
-
-                        // Blocks
-                       output.accept(ModBlocks.TWITCH_BLOCK.get());
-                       output.accept(ModBlocks.TWITCH_ORE.get());
-                        // Items
+                        // Twitch
+                        output.accept(ModBlocks.TWITCH_BLOCK.get());
+                        output.accept(ModBlocks.TWITCH_ORE.get());
                         output.accept(ModItems.TWITCH_DIAMOND.get());
-                        output.accept(ModItems.SCHOOL_BOOT.get());
-                        output.accept(ModItems.DUMPLING.get());
-                        output.accept(ModItems.STINTOCOIN.get());
                         output.accept(ModItems.TWITCH_HEART.get());
+                        // Streamers
+                        output.accept(ModItems.STINTOCOIN.get());
+                        output.accept(ModItems.DUMPLING.get());
+                        output.accept(ModItems.DUMPLING_SUN.get());
+                        output.accept(ModItems.DRAKE.get());
+                        // Items
+                        output.accept(ModItems.SCHOOL_BOOT.get());
+                        output.accept(ModItems.GLASSES.get());
                     })
                     .build());
 
