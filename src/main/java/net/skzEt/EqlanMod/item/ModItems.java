@@ -1,5 +1,6 @@
 package net.skzEt.EqlanMod.item;
 
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -28,10 +29,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> TWITCH_HEART = ITEMS.register("twitch_heart",
             () -> new Item(new Item.Properties()));
+    // Armor
     public static final RegistryObject<Item> GLASSES = ITEMS.register("glasses",
-            () -> new Item(new Item.Properties()));
+            () -> new ArmorItem(ModArmorMaterials.GLASSES, ArmorItem.Type.HELMET, new Item.Properties()));
 
-    // Food
 
 
     public static void register(IEventBus eventBus) {

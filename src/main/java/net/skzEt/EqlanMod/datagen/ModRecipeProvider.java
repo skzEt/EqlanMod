@@ -89,9 +89,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GLASSES.get())
                 .pattern("C C")
                 .pattern("GCG")
-                .pattern("  ")
                 .define('C', Items.COAL)
                 .define('G', Items.GLASS)
+                .unlockedBy(getHasName(Items.COAL), has(ModItems.TWITCH_HEART.get()))
+                .save(consumer);
+        // Dumpling Sun
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DUMPLING_SUN.get())
+                .pattern("D")
+                .pattern("G")
+                .define('D', ModItems.DUMPLING.get())
+                .define('G', ModItems.GLASSES.get())
                 .unlockedBy(getHasName(Items.COAL), has(ModItems.TWITCH_HEART.get()))
                 .save(consumer);
 

@@ -32,6 +32,7 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.DRAKE.get());
                         // Items
                         output.accept(ModItems.SCHOOL_BOOT.get());
+                        // Armor
                         output.accept(ModItems.GLASSES.get());
                     })
                     .build());
