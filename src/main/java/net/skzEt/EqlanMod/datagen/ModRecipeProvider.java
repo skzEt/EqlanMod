@@ -40,13 +40,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.TWITCH_BLOCK.get()), has(ModBlocks.TWITCH_BLOCK.get()))
                 .save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DUMPLING.get())
-                .pattern("WTW")
-                .pattern("TGT")
-                .pattern("WTW")
+                .pattern(" W ")
+                .pattern("WHW")
+                .pattern(" W ")
                 .define('W', Items.WHEAT)
-                .define('T', ModItems.TWITCH_DIAMOND.get())
-                .define('G', Items.BLACK_STAINED_GLASS)
-                .unlockedBy(getHasName(ModItems.TWITCH_DIAMOND.get()), has(ModItems.TWITCH_DIAMOND.get()))
+                .define('H', ModItems.TWITCH_HEART.get())
+                .unlockedBy(getHasName(ModItems.TWITCH_HEART.get()), has(ModItems.TWITCH_HEART.get()))
                 .save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SCHOOL_BOOT.get())
                 .pattern("KKK")
@@ -55,6 +54,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('K', Items.DRIED_KELP)
                 .define('B', Items.BLACK_DYE)
                 .unlockedBy(getHasName(Items.DRIED_KELP), has(Items.DRIED_KELP))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TWITCH_HEART.get())
+                .pattern( " T ")
+                .pattern("TGT")
+                .pattern(" T ")
+                .define('T', ModItems.TWITCH_DIAMOND.get())
+                .define('G', Items.GOLD_INGOT)
+                .unlockedBy(getHasName(ModItems.TWITCH_DIAMOND.get()), has(ModItems.TWITCH_DIAMOND.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STINTOCOIN.get())
+                .pattern(" G ")
+                .pattern("GHG")
+                .pattern(" G ")
+                .define('G', Items.GOLD_INGOT)
+                .define('H', ModItems.TWITCH_HEART.get())
+                .unlockedBy(getHasName(ModItems.TWITCH_HEART.get()), has(ModItems.TWITCH_HEART.get()))
                 .save(consumer);
 
     }

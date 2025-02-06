@@ -17,6 +17,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SCHOOL_BOOT = ITEMS.register("school_boot",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> STINTOCOIN = ITEMS.register("stintocoin",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TWITCH_HEART = ITEMS.register("twitch_heart",
+            () -> new Item(new Item.Properties()));
     // Food
     public static final RegistryObject<Item> DUMPLING = ITEMS.register("dumpling",
             () -> new Item(new Item.Properties().food(ModFoods.DUMPLING)));

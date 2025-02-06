@@ -24,6 +24,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.TWITCH_DIAMOND);
         simpleItem(ModItems.DUMPLING);
         simpleItem(ModItems.SCHOOL_BOOT);
+        simpleItem(ModItems.STINTOCOIN);
+        simpleItem(ModItems.TWITCH_HEART);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
