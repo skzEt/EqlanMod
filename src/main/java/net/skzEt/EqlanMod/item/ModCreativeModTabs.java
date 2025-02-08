@@ -29,11 +29,15 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.STINTOCOIN.get());
                         output.accept(ModItems.DUMPLING.get());
                         output.accept(ModItems.DUMPLING_SUN.get());
-                        output.accept(ModItems.DRAKE.get());
+                        output.accept(ModItems.DRAKE_PENDANT.get());
                         // Items
                         output.accept(ModItems.SCHOOL_BOOT.get());
+                        output.accept(ModItems.COIN_ALLOY.get());
                         // Armor
                         output.accept(ModItems.GLASSES.get());
+                        output.accept(ModItems.STINT_HELMET.get());
+                        // Food
+                        output.accept(ModItems.OVERCOOKED_DUMPLING.get());
                     })
                     .build());
 

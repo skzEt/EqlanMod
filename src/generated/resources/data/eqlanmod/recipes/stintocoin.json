@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:gold_nugget"
+    },
+    "H": {
+      "item": "eqlanmod:twitch_heart"
+    }
+  },
+  "pattern": [
+    " G ",
+    "GHG",
+    " G "
+  ],
+  "result": {
+    "item": "eqlanmod:stintocoin"
+  },
+  "show_notification": true
+}

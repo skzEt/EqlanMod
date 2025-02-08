@@ -9,5 +9,7 @@ public class ModFoods {
             .saturationMod(0.1f).effect(new MobEffectInstance(MobEffects.DARKNESS, 200), 0.5f).build();
     public static final FoodProperties DUMPLING_SUN = new FoodProperties.Builder().nutrition(4)
             .saturationMod(0.1f).effect(new MobEffectInstance(MobEffects.REGENERATION, 300), 1f).build();
+    public static final FoodProperties OVERCOOKED_DUMPLING = new FoodProperties.Builder().nutrition(1)
+            .saturationMod(0.1f).effect(new MobEffectInstance(MobEffects.HARM, 1), 1f).build();
 
 }

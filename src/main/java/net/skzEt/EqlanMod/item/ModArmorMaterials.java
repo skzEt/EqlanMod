@@ -11,8 +11,11 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
     GLASSES("glasses", 26, new int[]{0, 3, 2, 1}, 25,
-            SoundEvents.ARMOR_EQUIP_ELYTRA, 0f, 0f, () -> Ingredient.of(ModItems.SCHOOL_BOOT.get()));
-
+            SoundEvents.ARMOR_EQUIP_ELYTRA, 0f, 0f, () -> Ingredient.of(ModItems.SCHOOL_BOOT.get())),
+    PENDANT("pendant", 26, new int[]{0, 6, 0, 0}, 25,
+            SoundEvents.ARMOR_STAND_PLACE, 1f, 0f, () -> Ingredient.of(ModItems.TWITCH_DIAMOND.get())),
+    STINT("stint", 26, new int[]{8, 0, 0, 0}, 25,
+            SoundEvents.ANVIL_PLACE, 0.5f, 0f, () -> Ingredient.of(ModItems.COIN_ALLOY.get()));
     private final String name;
     private final int durabilityMultiplier;
     private final int[] protectionAmounts;

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "H": {
+      "item": "eqlanmod:twitch_heart"
+    },
+    "T": {
+      "item": "eqlanmod:twitch_diamond"
+    }
+  },
+  "pattern": [
+    " T ",
+    "DHD",
+    " T "
+  ],
+  "result": {
+    "item": "eqlanmod:drake_pendant"
+  },
+  "show_notification": true
+}

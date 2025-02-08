@@ -43,17 +43,20 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         // Streamers
-        simpleItem(ModItems.DRAKE);
         simpleItem(ModItems.STINTOCOIN);
         simpleItem(ModItems.DUMPLING);
         simpleItem(ModItems.DUMPLING_SUN);
+        trimmedArmorItem(ModItems.DRAKE_PENDANT);
         // Default
         simpleItem(ModItems.TWITCH_DIAMOND);
-        simpleItem(ModItems.GLASSES);
         simpleItem(ModItems.SCHOOL_BOOT);
         simpleItem(ModItems.TWITCH_HEART);
+        simpleItem(ModItems.COIN_ALLOY);
+        // Food
+        simpleItem(ModItems.OVERCOOKED_DUMPLING);
         // Armor
         trimmedArmorItem(ModItems.GLASSES);
+        trimmedArmorItem(ModItems.STINT_HELMET);
     }
 
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {

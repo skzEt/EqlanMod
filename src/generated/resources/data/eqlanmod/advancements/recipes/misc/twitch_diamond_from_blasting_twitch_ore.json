@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "eqlanmod:twitch_diamond_from_blasting_twitch_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_twitch_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "eqlanmod:twitch_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_twitch_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "eqlanmod:twitch_diamond_from_blasting_twitch_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

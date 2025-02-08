@@ -19,6 +19,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     private static final List<ItemLike> TWITCH_SMELTABLES = List.of(
             ModBlocks.TWITCH_ORE.get()
     );
+    private static final List<ItemLike> STINT_SMELTABLES = List.of(
+            ModItems.STINTOCOIN.get()
+    );
+    private static final List<ItemLike> DUMPLING_SMELTABLES = List.of(
+            ModItems.DUMPLING.get()
+    );
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
@@ -27,6 +33,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
         oreSmelting(consumer, TWITCH_SMELTABLES, RecipeCategory.MISC, ModItems.TWITCH_DIAMOND.get(), 0.1f, 200, "twitch");
         oreBlasting(consumer, TWITCH_SMELTABLES, RecipeCategory.MISC, ModItems.TWITCH_DIAMOND.get(), 0.1f, 100, "twitch");
+        oreSmelting(consumer, STINT_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_ALLOY.get(), 0f, 300, "stint");
+        oreBlasting(consumer, STINT_SMELTABLES, RecipeCategory.MISC,ModItems.COIN_ALLOY.get(),0f, 150, "stint");
+        oreSmelting(consumer, DUMPLING_SMELTABLES, RecipeCategory.MISC, ModItems.OVERCOOKED_DUMPLING.get(), 0f, 450, "dumpling");
+        foodSmoking(consumer, DUMPLING_SMELTABLES, RecipeCategory.MISC, ModItems.OVERCOOKED_DUMPLING.get(), 0f, 200, "dumpling");
+        foodCampfireCooking(consumer, DUMPLING_SMELTABLES, RecipeCategory.MISC, ModItems.OVERCOOKED_DUMPLING.get(), 0f, 600, "dumpling");
         // Twitch Block
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TWITCH_BLOCK.get())
                 .pattern("TTT")
@@ -76,12 +87,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('H', ModItems.TWITCH_HEART.get())
                 .unlockedBy(getHasName(ModItems.TWITCH_HEART.get()), has(ModItems.TWITCH_HEART.get()))
                 .save(consumer);
-        // Drake
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DRAKE.get())
-                .pattern(" F ")
-                .pattern("FHF")
-                .pattern(" F ")
-                .define('F', Items.BONE_MEAL)
+        // Drake Pendant
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DRAKE_PENDANT.get())
+                .pattern(" T ")
+                .pattern("DHD")
+                .pattern(" T ")
+                .define('T', ModItems.TWITCH_DIAMOND.get())
+                .define('D', Items.DIAMOND)
                 .define('H', ModItems.TWITCH_HEART.get())
                 .unlockedBy(getHasName(ModItems.TWITCH_HEART.get()), has(ModItems.TWITCH_HEART.get()))
                 .save(consumer);
@@ -99,7 +111,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("G")
                 .define('D', ModItems.DUMPLING.get())
                 .define('G', ModItems.GLASSES.get())
-                .unlockedBy(getHasName(Items.COAL), has(ModItems.TWITCH_HEART.get()))
+                .unlockedBy(getHasName(ModItems.DUMPLING.get()), has(ModItems.DUMPLING.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STINT_HELMET.get())
+                .pattern("CSC")
+                .pattern("C C")
+                .define('C', ModItems.COIN_ALLOY.get())
+                .define('S', ModItems.STINTOCOIN.get())
+                .unlockedBy(getHasName(ModItems.STINTOCOIN.get()), has(ModItems.STINTOCOIN.get()))
                 .save(consumer);
 
     }
@@ -110,6 +129,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_blasting");
+    }
+
+    protected static void foodSmoking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory,ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
+        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMOKING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_smoking");
+    }
+    protected static void foodCampfireCooking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory,ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
+        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_campfire_cooking");
     }
 
     protected static void oreCooking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {

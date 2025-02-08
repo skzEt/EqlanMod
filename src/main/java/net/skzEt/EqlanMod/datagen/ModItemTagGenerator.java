@@ -21,6 +21,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         this.tag(ItemTags.TRIMMABLE_ARMOR)
-                .add(ModItems.GLASSES.get());
+                .add(ModItems.GLASSES.get(),
+                        ModItems.DRAKE_PENDANT.get(),
+                        ModItems.STINT_HELMET.get());
     }
 }
