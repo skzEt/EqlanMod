@@ -19,10 +19,8 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
 
     @Override
     protected void start() {
-        add("stintocoin_from_grass", new AddItemModifier(new LootItemCondition[]{
-                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
-                LootItemRandomChanceCondition.randomChance(0.5f).build()}, ModItems.STINTOCOIN.get()));
-        add("stintocoin_from_pig", new AddItemModifier(new LootItemCondition[] {
-                new LootTableIdCondition.Builder(new ResourceLocation("entities/pig")).build()}, ModItems.STINTOCOIN.get()));
+        add("larva_from_dirt", new AddItemModifier(new LootItemCondition[]{
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.DIRT).build(),
+                LootItemRandomChanceCondition.randomChance(0.1f).build()}, ModItems.LARVA.get()));
     }
 }

@@ -54,6 +54,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.COIN_ALLOY);
         // Food
         simpleItem(ModItems.OVERCOOKED_DUMPLING);
+        simpleItem(ModItems.LARVA);
+        simpleItem(ModItems.COOKED_LARVA);
         // Armor
         trimmedArmorItem(ModItems.GLASSES);
         trimmedArmorItem(ModItems.STINT_HELMET);

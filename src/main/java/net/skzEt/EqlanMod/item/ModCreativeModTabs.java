@@ -38,6 +38,8 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.STINT_HELMET.get());
                         // Food
                         output.accept(ModItems.OVERCOOKED_DUMPLING.get());
+                        output.accept(ModItems.LARVA.get());
+                        output.accept(ModItems.COOKED_LARVA.get());
                     })
                     .build());
 

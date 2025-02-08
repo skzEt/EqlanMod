@@ -25,6 +25,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     private static final List<ItemLike> DUMPLING_SMELTABLES = List.of(
             ModItems.DUMPLING.get()
     );
+    private static final List<ItemLike> LARVA_SMELTABLES = List.of(
+            ModItems.LARVA.get()
+    );
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
@@ -33,11 +36,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
         oreSmelting(consumer, TWITCH_SMELTABLES, RecipeCategory.MISC, ModItems.TWITCH_DIAMOND.get(), 0.1f, 200, "twitch");
         oreBlasting(consumer, TWITCH_SMELTABLES, RecipeCategory.MISC, ModItems.TWITCH_DIAMOND.get(), 0.1f, 100, "twitch");
+
         oreSmelting(consumer, STINT_SMELTABLES, RecipeCategory.MISC, ModItems.COIN_ALLOY.get(), 0f, 300, "stint");
         oreBlasting(consumer, STINT_SMELTABLES, RecipeCategory.MISC,ModItems.COIN_ALLOY.get(),0f, 150, "stint");
+
         oreSmelting(consumer, DUMPLING_SMELTABLES, RecipeCategory.MISC, ModItems.OVERCOOKED_DUMPLING.get(), 0f, 450, "dumpling");
         foodSmoking(consumer, DUMPLING_SMELTABLES, RecipeCategory.MISC, ModItems.OVERCOOKED_DUMPLING.get(), 0f, 200, "dumpling");
         foodCampfireCooking(consumer, DUMPLING_SMELTABLES, RecipeCategory.MISC, ModItems.OVERCOOKED_DUMPLING.get(), 0f, 600, "dumpling");
+
+        oreSmelting(consumer, LARVA_SMELTABLES, RecipeCategory.MISC, ModItems.COOKED_LARVA.get(), 0f, 100, "dumpling");
+        foodSmoking(consumer, LARVA_SMELTABLES, RecipeCategory.MISC, ModItems.COOKED_LARVA.get(), 0f, 50, "dumpling");
+        foodCampfireCooking(consumer, LARVA_SMELTABLES, RecipeCategory.MISC, ModItems.COOKED_LARVA.get(), 0f, 150, "dumpling");
         // Twitch Block
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TWITCH_BLOCK.get())
                 .pattern("TTT")

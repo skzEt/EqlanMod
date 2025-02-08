@@ -39,6 +39,11 @@ public class ModItems {
     // Food
     public static final RegistryObject<Item> OVERCOOKED_DUMPLING = ITEMS.register("overcooked_dumpling",
             () -> new Item(new Item.Properties().food(ModFoods.OVERCOOKED_DUMPLING)));
+    public static final RegistryObject<Item> LARVA = ITEMS.register("larva",
+            () -> new Item(new Item.Properties().food(ModFoods.LARVA)));
+    public static final RegistryObject<Item> COOKED_LARVA = ITEMS.register("cooked_larva",
+            () -> new Item(new Item.Properties().food(ModFoods.COOKED_LARVA)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
