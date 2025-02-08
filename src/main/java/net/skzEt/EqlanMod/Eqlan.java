@@ -14,6 +14,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.skzEt.EqlanMod.block.ModBlocks;
 import net.skzEt.EqlanMod.item.ModCreativeModTabs;
 import net.skzEt.EqlanMod.item.ModItems;
+import net.skzEt.EqlanMod.loot.ModLootModifiers;
 import org.slf4j.Logger;
 
 @Mod(Eqlan.MOD_ID)
@@ -30,6 +31,8 @@ public class Eqlan
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
