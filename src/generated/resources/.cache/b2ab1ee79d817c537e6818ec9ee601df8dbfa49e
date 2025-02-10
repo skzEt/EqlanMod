@@ -1,3 +1,5 @@
-// 1.20.1	2025-02-03T23:37:34.3215569	Tags for minecraft:block mod id eqlanmod
+// 1.20.1	2025-02-10T23:10:12.7826238	Tags for minecraft:block mod id eqlanmod
+f1bc84a5140491c99ffbfad16102abd111827a95 data/eqlanmod/tags/blocks/om_nom_ore.json
+eb35797d10700d698cc85ef0710c03f059bc2301 data/eqlanmod/tags/blocks/om_nom_valuables.json
 4e1dc8a992ad2356783a464623b93aa1a2811eb9 data/minecraft/tags/blocks/mineable/pickaxe.json
 4e1dc8a992ad2356783a464623b93aa1a2811eb9 data/minecraft/tags/blocks/needs_iron_tool.json

@@ -1,6 +1,8 @@
 {
   "entries": [
-    "eqlanmod:larva_from_dirt"
+    "eqlanmod:larva_from_dirt",
+    "eqlanmod:coin_alloy_from_suspicous_sand",
+    "eqlanmod:om_nom_from_desert_pyramid"
   ],
   "replace": false
 }

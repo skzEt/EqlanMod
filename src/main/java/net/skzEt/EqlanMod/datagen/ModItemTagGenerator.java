@@ -23,6 +23,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         this.tag(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.GLASSES.get(),
                         ModItems.DRAKE_PENDANT.get(),
-                        ModItems.STINT_HELMET.get());
+                        ModItems.STINT_HELMET.get(),
+                        ModItems.BOXERS.get());
     }
 }

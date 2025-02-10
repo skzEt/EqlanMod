@@ -1,3 +1,5 @@
-// 1.20.1	2025-02-08T22:38:15.3426533	Global Loot Modifiers : eqlanmod
+// 1.20.1	2025-02-10T23:17:39.8353796	Global Loot Modifiers : eqlanmod
+289d494ad67100a1af2fe7e1d0d86909857b1c12 data/eqlanmod/loot_modifiers/coin_alloy_from_suspicous_sand.json
 55cacc4bc76e29e31a684d91a90374886bdcf691 data/eqlanmod/loot_modifiers/larva_from_dirt.json
-2f730b197efca60ac5b7a14578a7b1cb55242bab data/forge/loot_modifiers/global_loot_modifiers.json
+2846d4e5541873d50d2efdb074bc9539e05b48e0 data/eqlanmod/loot_modifiers/om_nom_from_desert_pyramid.json
+864ee223baa6a083ec88db69c1f61a4291cdd64b data/forge/loot_modifiers/global_loot_modifiers.json

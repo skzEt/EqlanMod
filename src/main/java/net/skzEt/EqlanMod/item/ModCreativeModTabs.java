@@ -33,9 +33,12 @@ public class ModCreativeModTabs {
                         // Items
                         output.accept(ModItems.SCHOOL_BOOT.get());
                         output.accept(ModItems.COIN_ALLOY.get());
+                        output.accept(ModItems.OM_NOM.get());
+                        output.accept(ModItems.CACTUS_PLUSH.get());
                         // Armor
                         output.accept(ModItems.GLASSES.get());
                         output.accept(ModItems.STINT_HELMET.get());
+                        output.accept(ModItems.BOXERS.get());
                         // Food
                         output.accept(ModItems.OVERCOOKED_DUMPLING.get());
                         output.accept(ModItems.LARVA.get());

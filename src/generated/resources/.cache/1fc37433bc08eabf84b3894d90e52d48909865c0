@@ -1,4 +1,15 @@
-// 1.20.1	2025-02-08T22:38:15.3391492	Item Models: eqlanmod
+// 1.20.1	2025-02-10T23:01:20.0522	Item Models: eqlanmod
+aab5dcae481f2a05913c0b68a6575ec8a8615ee4 assets/eqlanmod/models/item/boxers.json
+2ffddf7f61ef2054687c9c1c808b204b2878c763 assets/eqlanmod/models/item/boxers_amethyst_trim.json
+a8f4a81d14cefcd5067f6aec1242c246c9082400 assets/eqlanmod/models/item/boxers_copper_trim.json
+85567c42f08fb71442344f886fdc94b16b3ee5f7 assets/eqlanmod/models/item/boxers_diamond_trim.json
+5436de4b2fb3d241fa39c7ff1271e2334afc507e assets/eqlanmod/models/item/boxers_emerald_trim.json
+ef2b8cb43eae119ca28c671f9cef723ad341ae94 assets/eqlanmod/models/item/boxers_gold_trim.json
+42922e2bdf834b0d9b7662f27b0fbd6fe3246213 assets/eqlanmod/models/item/boxers_iron_trim.json
+f540d24c6f282529413df7573f9605ca0c8b7f63 assets/eqlanmod/models/item/boxers_lapis_trim.json
+5d8aa40a0d5ad5fd5ab91af6b7d8bdf2d49e2b82 assets/eqlanmod/models/item/boxers_netherite_trim.json
+f969ed1a2ad80bcca5d93084d20cb94645c0a75a assets/eqlanmod/models/item/boxers_quartz_trim.json
+bd29aec1ce0374c1508c2f270a8bc091c4c9f2e8 assets/eqlanmod/models/item/boxers_redstone_trim.json
 ce0d01a98f1e3d2c278dd0d43455c38c1b4d40d5 assets/eqlanmod/models/item/coin_alloy.json
 8e1d01fffdc3e13d53e37b831d58ba3283a50d4e assets/eqlanmod/models/item/cooked_larva.json
 19cde39a81a6b98d6cce913292d0587cf23ac061 assets/eqlanmod/models/item/drake_pendant.json

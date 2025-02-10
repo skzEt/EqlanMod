@@ -15,7 +15,9 @@ public enum ModArmorMaterials implements ArmorMaterial {
     PENDANT("pendant", 26, new int[]{0, 6, 0, 0}, 25,
             SoundEvents.ARMOR_STAND_PLACE, 1f, 0f, () -> Ingredient.of(ModItems.TWITCH_DIAMOND.get())),
     STINT("stint", 26, new int[]{8, 0, 0, 0}, 25,
-            SoundEvents.ANVIL_PLACE, 0.5f, 0f, () -> Ingredient.of(ModItems.COIN_ALLOY.get()));
+            SoundEvents.ANVIL_PLACE, 0.5f, 0f, () -> Ingredient.of(ModItems.COIN_ALLOY.get())),
+    BOXERS("boxers", 26, new int[]{0, 0, 6, 0}, 25,
+    SoundEvents.ARMOR_EQUIP_GOLD, 0.1f, 0.2f, () -> Ingredient.of(ModItems.SCHOOL_BOOT.get()));
     private final String name;
     private final int durabilityMultiplier;
     private final int[] protectionAmounts;
