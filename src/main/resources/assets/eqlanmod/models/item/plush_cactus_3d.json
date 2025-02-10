@@ -1,20 +1,20 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "eqlanmod:item/Cactus/Bottom",
-		"1": "eqlanmod:item/Cactus/Top",
-		"2": "eqlanmod:item/Cactus/Top_1",
-		"3": "eqlanmod:item/Cactus/Top_2",
-		"4": "eqlanmod:item/Cactus/Top_3",
-		"5": "eqlanmod:item/Cactus/Cactus_1",
-		"6": "eqlanmod:item/Cactus/Cactus_2",
-		"7": "eqlanmod:item/Cactus/Cactus_3",
-		"8": "eqlanmod:item/Cactus/Cactus_4",
-		"9": "eqlanmod:item/Cactus/Cactus_5",
-		"10": "eqlanmod:item/Cactus/Cactus_6",
-		"11": "eqlanmod:item/Cactus/Cactus_7",
-		"12": "eqlanmod:item/Cactus/Cactus_8",
-		"particle": "eqlanmod:item/Bottom"
+		"0": "Bottom",
+		"1": "Top",
+		"2": "Top_1",
+		"3": "Top_2",
+		"4": "Top_3",
+		"5": "Cactus_1",
+		"6": "Cactus_2",
+		"7": "Cactus_3",
+		"8": "Cactus_4",
+		"9": "Cactus_5",
+		"10": "Cactus_6",
+		"11": "Cactus_7",
+		"12": "Cactus_8",
+		"particle": "Bottom"
 	},
 	"elements": [
 		{
