@@ -23,18 +23,24 @@ public class ModCreativeModTabs {
                         // Twitch
                         output.accept(ModBlocks.TWITCH_BLOCK.get());
                         output.accept(ModBlocks.TWITCH_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_TWITCH_ORE.get());
                         output.accept(ModItems.TWITCH_DIAMOND.get());
                         output.accept(ModItems.TWITCH_HEART.get());
                         // Streamers
                         output.accept(ModItems.STINTOCOIN.get());
-                        output.accept(ModItems.DUMPLING.get());
                         output.accept(ModItems.DUMPLING_SUN.get());
                         output.accept(ModItems.DRAKE_PENDANT.get());
+                        output.accept(ModItems.MZLFF_MICROPHONE.get());
                         // Items
+                        output.accept(ModItems.DUMPLING.get());
                         output.accept(ModItems.SCHOOL_BOOT.get());
                         output.accept(ModItems.COIN_ALLOY.get());
+                        output.accept(ModItems.EBLAN_ALLOY.get());
+                        // Custom Items
                         output.accept(ModItems.OM_NOM.get());
                         output.accept(ModItems.CACTUS_PLUSH.get());
+                        // Music
+                        output.accept(ModItems.BASELINE_BUSINESS_DISK.get());
                         // Armor
                         output.accept(ModItems.GLASSES.get());
                         output.accept(ModItems.STINT_HELMET.get());

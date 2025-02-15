@@ -3,6 +3,7 @@
   "item.eqlanmod.dumpling_sun": "Солнечный пельмень",
   "item.eqlanmod.drake_pendant": "Подвеска Драке",
   "item.eqlanmod.stintocoin": "Стинта Коин",
+  "item.eqlanmod.mzlff_microphone": "Микрофон Мазелова",
 
   "item.eqlanmod.glasses": "Крутые очки",
   "item.eqlanmod.stint_helmet": "Позолоченный монетами шлем",
@@ -18,8 +19,13 @@
   "item.eqlanmod.coin_alloy": "Сплав монет",
   "item.eqlanmod.om_nom": "Ам Ням",
   "item.eqlanmod.cactus_plush": "Танцующий кактус",
+  "item.eqlanmod.eqlan_alloy": "Сплав Еблан сквада",
+
+  "item.eqlanmod.baseline_business_disk": "Бэйслайн Бизнес",
+  "item.eqlanmod.baseline_business_disk.desc": "CMH, mzlff - Бэйслайн Бизнес",
 
   "block.eqlanmod.twitch_ore": "Твичовская руда",
+  "block.eqlanmod.deepslate_twitch_ore": "Глубокая сланцевая твичовская руда",
   "block.eqlanmod.twitch_block": "Твичовский блок",
 
   "sounds.eqlanmod.cactus_used": "",

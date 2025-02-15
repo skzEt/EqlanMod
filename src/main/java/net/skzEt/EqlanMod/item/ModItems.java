@@ -2,20 +2,23 @@ package net.skzEt.EqlanMod.item;
 
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.RecordItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.skzEt.EqlanMod.Eqlan;
 import net.skzEt.EqlanMod.item.custom.CactusPlushItem;
+import net.skzEt.EqlanMod.item.custom.FuelItem;
 import net.skzEt.EqlanMod.item.custom.OmNomItem;
+import net.skzEt.EqlanMod.sound.ModSounds;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, Eqlan.MOD_ID);
     // Custom Items
     public static final RegistryObject<Item> OM_NOM = ITEMS.register("om_nom",
-            () -> new OmNomItem(new Item.Properties().durability(1)));
+            () -> new OmNomItem(new Item.Properties().durability(600)));
     public static final RegistryObject<Item> CACTUS_PLUSH = ITEMS.register("cactus_plush",
             () -> new CactusPlushItem(new Item.Properties().durability(100)));
 
@@ -28,14 +31,18 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.DUMPLING)));
     public static final RegistryObject<Item> DUMPLING_SUN = ITEMS.register("dumpling_sun",
             () -> new Item(new Item.Properties().food(ModFoods.DUMPLING_SUN)));
+    public static final RegistryObject<Item> MZLFF_MICROPHONE = ITEMS.register("mzlff_microphone",
+            () -> new Item(new Item.Properties()));
     // Default Items
     public static final RegistryObject<Item> TWITCH_DIAMOND = ITEMS.register("twitch_diamond",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SCHOOL_BOOT = ITEMS.register("school_boot",
-            () -> new Item(new Item.Properties()));
+            () -> new FuelItem(new Item.Properties(), 400));
     public static final RegistryObject<Item> TWITCH_HEART = ITEMS.register("twitch_heart",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COIN_ALLOY = ITEMS.register("coin_alloy",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> EBLAN_ALLOY = ITEMS.register("eqlan_alloy",
             () -> new Item(new Item.Properties()));
     // Armor
     public static final RegistryObject<Item> GLASSES = ITEMS.register("glasses",
@@ -51,6 +58,11 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.LARVA)));
     public static final RegistryObject<Item> COOKED_LARVA = ITEMS.register("cooked_larva",
             () -> new Item(new Item.Properties().food(ModFoods.COOKED_LARVA)));
+    // Music Disk
+    // Чтобы получить длину музыку берешь секунды всей музыки и умножаешь на 20
+    public static final RegistryObject<Item> BASELINE_BUSINESS_DISK = ITEMS.register("baseline_business_disk",
+            () -> new RecordItem(6, ModSounds.BASELINE_BUSINESS, new Item.Properties().stacksTo(1), 2260));
+
 
 
     public static void register(IEventBus eventBus) {

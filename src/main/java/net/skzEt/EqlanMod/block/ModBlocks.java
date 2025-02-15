@@ -24,6 +24,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> TWITCH_ORE = registerBlock("twitch_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(1, 2)));
+    public static final RegistryObject<Block> DEEPSLATE_TWITCH_ORE = registerBlock("deepslate_twitch_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
+                    .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(1, 2)));
     public static final RegistryObject<Block> TWITCH_BLOCK = registerBlock("twitch_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.ANVIL)));
 

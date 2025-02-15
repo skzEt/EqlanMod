@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_dried_kelp": {
+    "has_coal": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:dried_kelp"
+              "minecraft:coal"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_dried_kelp",
+      "has_coal",
       "has_the_recipe"
     ]
   ],

@@ -47,15 +47,19 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.DUMPLING);
         simpleItem(ModItems.DUMPLING_SUN);
         trimmedArmorItem(ModItems.DRAKE_PENDANT);
+        simpleItem(ModItems.MZLFF_MICROPHONE);
         // Default
         simpleItem(ModItems.TWITCH_DIAMOND);
         simpleItem(ModItems.SCHOOL_BOOT);
         simpleItem(ModItems.TWITCH_HEART);
         simpleItem(ModItems.COIN_ALLOY);
+        simpleItem(ModItems.EBLAN_ALLOY);
         // Food
         simpleItem(ModItems.OVERCOOKED_DUMPLING);
         simpleItem(ModItems.LARVA);
         simpleItem(ModItems.COOKED_LARVA);
+        // Music
+        simpleItem(ModItems.BASELINE_BUSINESS_DISK);
         // Armor
         trimmedArmorItem(ModItems.GLASSES);
         trimmedArmorItem(ModItems.STINT_HELMET);

@@ -15,6 +15,8 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> OM_NOM_USED = registerSoundEvents("om_nom_used");
     public static final RegistryObject<SoundEvent> OM_NOM_EXPLODED = registerSoundEvents("om_nom_exploded");
 
+    public static final RegistryObject<SoundEvent> BASELINE_BUSINESS = registerSoundEvents("baseline_business");
+
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name) {
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(Eqlan.MOD_ID, name)));

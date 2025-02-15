@@ -27,6 +27,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.TWITCH_ORE.get(),
                 block -> createCopperLikeOreDrops(ModBlocks.TWITCH_ORE.get(), ModItems.TWITCH_DIAMOND.get()));
         this.dropSelf(ModBlocks.TWITCH_BLOCK.get());
+        this.add(ModBlocks.DEEPSLATE_TWITCH_ORE.get(),
+                block -> createCopperLikeOreDrops(ModBlocks.DEEPSLATE_TWITCH_ORE.get(), ModItems.TWITCH_DIAMOND.get()));
+        this.dropSelf(ModBlocks.TWITCH_BLOCK.get());
     }
 
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {

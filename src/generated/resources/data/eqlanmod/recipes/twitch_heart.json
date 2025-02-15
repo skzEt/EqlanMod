@@ -10,9 +10,7 @@
     }
   },
   "pattern": [
-    " T ",
-    "TGT",
-    " T "
+    "TG"
   ],
   "result": {
     "item": "eqlanmod:twitch_heart"

@@ -25,5 +25,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.DRAKE_PENDANT.get(),
                         ModItems.STINT_HELMET.get(),
                         ModItems.BOXERS.get());
+        this.tag(ItemTags.MUSIC_DISCS)
+                .add(ModItems.BASELINE_BUSINESS_DISK.get());
+        this.tag(ItemTags.CREEPER_DROP_MUSIC_DISCS)
+                .add(ModItems.BASELINE_BUSINESS_DISK.get());
     }
 }

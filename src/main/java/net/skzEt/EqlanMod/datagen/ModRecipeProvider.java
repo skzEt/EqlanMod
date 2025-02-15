@@ -17,7 +17,8 @@ import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
     private static final List<ItemLike> TWITCH_SMELTABLES = List.of(
-            ModBlocks.TWITCH_ORE.get()
+            ModBlocks.TWITCH_ORE.get(),
+            ModBlocks.DEEPSLATE_TWITCH_ORE.get()
     );
     private static final List<ItemLike> STINT_SMELTABLES = List.of(
             ModItems.STINTOCOIN.get()
@@ -44,9 +45,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         foodSmoking(consumer, DUMPLING_SMELTABLES, RecipeCategory.MISC, ModItems.OVERCOOKED_DUMPLING.get(), 0f, 200, "dumpling");
         foodCampfireCooking(consumer, DUMPLING_SMELTABLES, RecipeCategory.MISC, ModItems.OVERCOOKED_DUMPLING.get(), 0f, 600, "dumpling");
 
-        oreSmelting(consumer, LARVA_SMELTABLES, RecipeCategory.MISC, ModItems.COOKED_LARVA.get(), 0f, 100, "dumpling");
-        foodSmoking(consumer, LARVA_SMELTABLES, RecipeCategory.MISC, ModItems.COOKED_LARVA.get(), 0f, 50, "dumpling");
-        foodCampfireCooking(consumer, LARVA_SMELTABLES, RecipeCategory.MISC, ModItems.COOKED_LARVA.get(), 0f, 150, "dumpling");
+        oreSmelting(consumer, LARVA_SMELTABLES, RecipeCategory.MISC, ModItems.COOKED_LARVA.get(), 0f, 100, "larva");
+        foodSmoking(consumer, LARVA_SMELTABLES, RecipeCategory.MISC, ModItems.COOKED_LARVA.get(), 0f, 50, "larva");
+        foodCampfireCooking(consumer, LARVA_SMELTABLES, RecipeCategory.MISC, ModItems.COOKED_LARVA.get(), 0f, 150, "larva");
         // Twitch Block
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TWITCH_BLOCK.get())
                 .pattern("TTT")
@@ -71,18 +72,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(consumer);
         // School Boot
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SCHOOL_BOOT.get())
-                .pattern("KKK")
-                .pattern("KBK")
-                .pattern("KKK")
+                .pattern("KK ")
+                .pattern("KB ")
+                .pattern("KKC")
                 .define('K', Items.DRIED_KELP)
                 .define('B', Items.BLACK_DYE)
-                .unlockedBy(getHasName(Items.DRIED_KELP), has(Items.DRIED_KELP))
+                .define('C', Items.COAL)
+                .unlockedBy(getHasName(Items.COAL), has(Items.COAL))
                 .save(consumer);
         // Twitch Heart
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TWITCH_HEART.get())
-                .pattern( " T ")
-                .pattern("TGT")
-                .pattern(" T ")
+                .pattern( "TG")
                 .define('T', ModItems.TWITCH_DIAMOND.get())
                 .define('G', Items.GOLD_INGOT)
                 .unlockedBy(getHasName(ModItems.TWITCH_DIAMOND.get()), has(ModItems.TWITCH_DIAMOND.get()))
@@ -110,8 +110,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GLASSES.get())
                 .pattern("C C")
                 .pattern("GCG")
+                .pattern(" R ")
                 .define('C', Items.COAL)
                 .define('G', Items.GLASS)
+                .define('R', Items.RED_WOOL)
                 .unlockedBy(getHasName(Items.COAL), has(ModItems.TWITCH_HEART.get()))
                 .save(consumer);
         // Dumpling Sun
@@ -129,7 +131,39 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', ModItems.STINTOCOIN.get())
                 .unlockedBy(getHasName(ModItems.STINTOCOIN.get()), has(ModItems.STINTOCOIN.get()))
                 .save(consumer);
-
+        // EBLAN ALLOY
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.EBLAN_ALLOY.get())
+                .pattern("ST")
+                .pattern("DM")
+                .define('S', ModItems.STINTOCOIN.get())
+                .define('T', ModItems.DUMPLING_SUN.get())
+                .define('D', ModItems.DRAKE_PENDANT.get())
+                .define('M', ModItems.MZLFF_MICROPHONE.get())
+                .unlockedBy(getHasName(ModItems.STINTOCOIN.get()), has(ModItems.STINTOCOIN.get()))
+                .unlockedBy(getHasName(ModItems.DUMPLING_SUN.get()), has(ModItems.DUMPLING_SUN.get()))
+                .unlockedBy(getHasName(ModItems.DRAKE_PENDANT.get()), has(ModItems.DRAKE_PENDANT.get()))
+                .unlockedBy(getHasName(ModItems.MZLFF_MICROPHONE.get()), has(ModItems.MZLFF_MICROPHONE.get()))
+                .save(consumer);
+        // MZLFF MICROPHONE
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MZLFF_MICROPHONE.get())
+                .pattern("CC ")
+                .pattern("CH ")
+                .pattern("  S")
+                .define('C', Items.COAL)
+                .define('H', ModItems.TWITCH_HEART.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.TWITCH_HEART.get()), has(ModItems.TWITCH_HEART.get()))
+                .save(consumer);
+        // OM NOM
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.OM_NOM.get())
+                .pattern("LLL")
+                .pattern("LER")
+                .pattern("LLL")
+                .define('L', Items.LIME_DYE)
+                .define('E', ModItems.EBLAN_ALLOY.get())
+                .define('R', Items.RED_DYE)
+                .unlockedBy(getHasName(ModItems.EBLAN_ALLOY.get()), has(ModItems.EBLAN_ALLOY.get()))
+                .save(consumer);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {

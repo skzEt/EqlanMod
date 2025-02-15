@@ -10,5 +10,13 @@
     "sounds": [
       "eqlanmod:om_nom_exploded"
     ]
+  },
+  "baseline_business": {
+    "sounds": [
+      {
+        "name": "eqlanmod:baseline_business",
+        "stream": true
+      }
+    ]
   }
 }

@@ -40,10 +40,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.TWITCH_ORE.get())
-                .add(ModBlocks.TWITCH_BLOCK.get());
+                .add(ModBlocks.TWITCH_BLOCK.get())
+                .add(ModBlocks.DEEPSLATE_TWITCH_ORE.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.TWITCH_ORE.get())
-                .add(ModBlocks.TWITCH_BLOCK.get());
+                .add(ModBlocks.TWITCH_BLOCK.get())
+                .add(ModBlocks.DEEPSLATE_TWITCH_ORE.get());
     }
 }
